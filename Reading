@@ -1,0 +1,2 @@
+with open("grades.txt", "r") as f:
+    print(f.read())
