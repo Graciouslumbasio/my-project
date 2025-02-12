@@ -1,0 +1,6 @@
+import sqlite3
+conn = sqlite3.connect("grades.db")
+c = conn.cursor()
+c.execute("SELECT * FROM students")
+print(c.fetchall())
+conn.close()
