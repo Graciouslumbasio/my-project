@@ -1,5 +1,10 @@
-import json
-data = {"name": input("Enter name: "), "marks": float(input("Enter marks: "))}
-data["grade"] = 'A' if data["marks"] >= 90 else 'B' if data["marks"] >= 80 else 'C' if data["marks"] >= 70 else 'D' if data["marks"] >= 60 else 'F'
-with open("grades.json", "w") as f:
-    json.dump(data, f)
+import sqlite3
+conn = sqlite3.connect("grades.db")
+c = conn.cursor()
+c.execute("CREATE TABLE IF NOT EXISTS students (name TEXT, marks REAL, grade TEXT)")
+name = input("Name: ")
+marks = float(input("Marks: "))
+grade = 'A' if marks >= 90 else 'B' if marks >= 80 else 'C' if marks >= 70 else 'D' if marks >= 60 else 'F'
+c.execute("INSERT INTO students VALUES (?, ?, ?)", (name, marks, grade))
+conn.commit()
+conn.close()
