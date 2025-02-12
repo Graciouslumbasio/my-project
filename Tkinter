@@ -1,0 +1,14 @@
+import tkinter as tk
+
+def calculate():
+    marks = float(entry.get())
+    grade = 'A' if marks >= 90 else 'B' if marks >= 80 else 'C' if marks >= 70 else 'D' if marks >= 60 else 'F'
+    label_result.config(text=f"Grade: {grade}")
+
+root = tk.Tk()
+entry = tk.Entry(root)
+entry.pack()
+tk.Button(root, text="Get Grade", command=calculate).pack()
+label_result = tk.Label(root, text="")
+label_result.pack()
+root.mainloop()
