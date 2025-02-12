@@ -1,5 +1,5 @@
-grade = lambda marks: 'A' if marks >= 90 else 'B' if marks >= 80 else 'C' if marks >= 70 else 'D' if marks >= 60 else 'F'
-name, marks = input("Enter name: "), float(input("Enter marks: "))
-print(f"{name} received grade {grade(marks)}.")
-
-
+import json
+data = {"name": input("Enter name: "), "marks": float(input("Enter marks: "))}
+data["grade"] = 'A' if data["marks"] >= 90 else 'B' if data["marks"] >= 80 else 'C' if data["marks"] >= 70 else 'D' if data["marks"] >= 60 else 'F'
+with open("grades.json", "w") as f:
+    json.dump(data, f)
