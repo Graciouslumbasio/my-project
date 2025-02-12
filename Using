@@ -1,3 +1,5 @@
 grade = lambda marks: 'A' if marks >= 90 else 'B' if marks >= 80 else 'C' if marks >= 70 else 'D' if marks >= 60 else 'F'
 name, marks = input("Enter name: "), float(input("Enter marks: "))
 print(f"{name} received grade {grade(marks)}.")
+
+
