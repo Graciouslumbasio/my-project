@@ -1,0 +1,5 @@
+# Basic grading system with CLI input
+name = input("Enter student name: ")
+marks = float(input("Enter marks out of 100: "))
+grade = 'A' if marks >= 90 else 'B' if marks >= 80 else 'C' if marks >= 70 else 'D' if marks >= 60 else 'F'
+print(f"{name} scored {marks} and got grade {grade}.")
