@@ -1,10 +1,4 @@
-import sqlite3
-conn = sqlite3.connect("grades.db")
-c = conn.cursor()
-c.execute("CREATE TABLE IF NOT EXISTS students (name TEXT, marks REAL, grade TEXT)")
-name = input("Name: ")
-marks = float(input("Marks: "))
-grade = 'A' if marks >= 90 else 'B' if marks >= 80 else 'C' if marks >= 70 else 'D' if marks >= 60 else 'F'
-c.execute("INSERT INTO students VALUES (?, ?, ?)", (name, marks, grade))
-conn.commit()
-conn.close()
+import numpy as np
+marks = np.array([float(input("Enter marks: "))])
+grade = np.where(marks >= 90, 'A', np.where(marks >= 80, 'B', np.where(marks >= 70, 'C', np.where(marks >= 60, 'D', 'F'))))
+print(f"Grade: {grade[0]}")
