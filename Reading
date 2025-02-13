@@ -1,3 +1,0 @@
-import json
-with open("grades.json", "r") as f:
-    print(json.load(f))
