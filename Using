@@ -1,4 +1,0 @@
-import numpy as np
-marks = np.array([float(input("Enter marks: "))])
-grade = np.where(marks >= 90, 'A', np.where(marks >= 80, 'B', np.where(marks >= 70, 'C', np.where(marks >= 60, 'D', 'F'))))
-print(f"Grade: {grade[0]}")
