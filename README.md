@@ -20,11 +20,9 @@ Data Export: Export grades to Excel, CSV, or PDF formats.
 
 Technologies Used
 
-Programming Language: Python / Java / JavaScript (based on your implementation)
+Programming Language: Python / Java / JavaScript
 
-Framework: Django / Flask / Spring Boot / Node.js
-
-Database: MySQL / PostgreSQL / SQLite
+Database: MySQL / SQLite
 
 Frontend: HTML, CSS, JavaScript (if applicable)
 
@@ -34,7 +32,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/yourusername/student-grading-system.git
+git clone https://github.com/Graciouslumbasio/student-grading-system.git
 
 Navigate to the project directory:
 
@@ -42,7 +40,6 @@ cd student-grading-system
 
 Install dependencies:
 
-pip install -r requirements.txt  # For Python
 npm install  # For Node.js
 
 Configure the database settings in the .env or config file.
@@ -85,4 +82,16 @@ git push origin feature-branch
 
 Open a Pull Request.
 
+License
 
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Contact
+
+For any inquiries or support, contact:
+
+Email: lumbasiogracious@gmail.com
+
+GitHub: Graciouslumbasio
+
+Issues: Open a new issue in the repository
